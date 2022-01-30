@@ -67,7 +67,11 @@ enum Reminder {
         content.badge = 1
         content.userInfo = userInfo
         UIApplication.shared.applicationIconBadgeNumber += 1
-
+        
+//        let imageName = "applelogo"
+//        guard let imageURL = Bundle.main.url(forResource: imageName, withExtension: "jpg") else { return }
+//        let attachment = try! UNNotificationAttachment(identifier: imageName, url: imageURL, options: .none)
+//        content.attachments = [attachment]
         let triger = UNCalendarNotificationTrigger(dateMatching: reminder.getDateComponents(), repeats: repeats)
         let request = UNNotificationRequest(identifier: reminder.identifier , content: content, trigger: triger)
         UNUserNotificationCenter.current().add(request) { _ in}
