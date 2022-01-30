@@ -27,5 +27,7 @@ class OnboardingVC: BaseVC {
     
     @objc func showTerms() {
         WebViewController.goToTerm()
+        
+        state[b: "changeBack"] = true
     }
 }

@@ -38,6 +38,9 @@ class OnboardinView: BaseView {
     override func render() {
         if state[i: "key"] == 1 {backgroundColor = .green}
         print(state)
+        if state[b: "changeBack"] {
+            backgroundColor = .red
+        }
     }
     
     public func setTargets(for type: OnboardinView.Interface,
