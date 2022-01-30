@@ -25,6 +25,8 @@
 		B52B76FC27A6BB21002BFFB6 /* terms.html in Resources */ = {isa = PBXBuildFile; fileRef = B52B76FB27A6BB21002BFFB6 /* terms.html */; };
 		B52B76FE27A6BB3A002BFFB6 /* privacy.html in Resources */ = {isa = PBXBuildFile; fileRef = B52B76FD27A6BB3A002BFFB6 /* privacy.html */; };
 		B52B770227A6D858002BFFB6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B52B770427A6D858002BFFB6 /* Localizable.strings */; };
+		B5CD761B27A6DC1500E1AEB4 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CD761A27A6DC1500E1AEB4 /* Reminder.swift */; };
+		B5CD761D27A6DC6600E1AEB4 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CD761C27A6DC6600E1AEB4 /* Log.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		B52B770327A6D858002BFFB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B52B770527A6D88F002BFFB6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		B52B770627A6D88F002BFFB6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B5CD761A27A6DC1500E1AEB4 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		B5CD761C27A6DC6600E1AEB4 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,8 @@
 				B52B76F327A6B62C002BFFB6 /* UIButton.swift */,
 				B52B76F527A6B655002BFFB6 /* Presenter.swift */,
 				B52B76F727A6B6C6002BFFB6 /* WebViewController.swift */,
+				B5CD761A27A6DC1500E1AEB4 /* Reminder.swift */,
+				B5CD761C27A6DC6600E1AEB4 /* Log.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -236,6 +242,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B52B76E027A6AC43002BFFB6 /* BaseVC.swift in Sources */,
+				B5CD761B27A6DC1500E1AEB4 /* Reminder.swift in Sources */,
+				B5CD761D27A6DC6600E1AEB4 /* Log.swift in Sources */,
 				B52B76CA27A6ABBE002BFFB6 /* AppDelegate.swift in Sources */,
 				B52B76E527A6B200002BFFB6 /* OnboardingVC.swift in Sources */,
 				B52B76E727A6B20A002BFFB6 /* OnboardingView.swift in Sources */,

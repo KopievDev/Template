@@ -26,8 +26,8 @@ class OnboardingVC: BaseVC {
     }
     
     @objc func showTerms() {
-        WebViewController.goToTerm()
-        
+//        WebViewController.goToTerm()
+        Reminder.createNotificatication(for: Notifucka(time: Date().addingTimeInterval(5)))
         state[b: "changeBack"] = true
     }
 }
