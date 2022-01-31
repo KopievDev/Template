@@ -6,5 +6,8 @@ target 'TemplateProject' do
   use_frameworks!
 
   # Pods for TemplateProject
+  #pod 'ApphudSDK'
+  pod 'lottie-ios'
+  #pod 'SDWebImage'
 
 end

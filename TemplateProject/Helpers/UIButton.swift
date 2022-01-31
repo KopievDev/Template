@@ -27,3 +27,22 @@ extension UIButton {
     }
 
 }
+
+extension String {
+    func add(attributs params: (UIFont, UIColor)) -> NSMutableAttributedString {
+        let attributedString = NSMutableAttributedString()
+            attributedString.append(
+                NSMutableAttributedString(string: self,
+                                          attributes:
+                                            [NSAttributedString.Key.font :params.0,
+                                             NSAttributedString.Key.foregroundColor : params.1]))
+        return attributedString
+    }
+}
+
+extension NSMutableAttributedString {
+    static func + (lhs:NSMutableAttributedString, rhs:NSMutableAttributedString ) -> NSMutableAttributedString {
+        lhs.append(rhs)
+        return lhs
+    }
+}
