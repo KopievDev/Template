@@ -33,18 +33,21 @@ class WebViewController: UIViewController, WKUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        guard let url = URL(string: url) else {return}
-        let myRequest = URLRequest(url: url)
-        webView.load(myRequest)
-        
-        print(url)
+        sendReguest()
     }
     
     // MARK: - Helpers
-    
     func set(url: String) {
         self.url = url
+        sendReguest()
     }
+    
+    private func sendReguest() {
+        guard let url = URL(string: url) else {return}
+        let myRequest = URLRequest(url: url)
+        webView.load(myRequest)
+    }
+    
     
 }
 

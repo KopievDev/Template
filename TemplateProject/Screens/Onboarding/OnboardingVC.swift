@@ -14,8 +14,10 @@ class OnboardingVC: BaseVC {
     override func loadView() {view = v}
     override func viewDidLoad() {
         super.viewDidLoad()
+        Loader.show(title: "Wait", animation: "loading_1")
         DispatchQueue.main.asyncAfter(deadline: .now()+3) {
             self.state = ["key":1]
+            Loader.hide()
         }
         setTarget()
         
@@ -26,8 +28,13 @@ class OnboardingVC: BaseVC {
     }
     
     @objc func showTerms() {
-//        WebViewController.goToTerm()
         Reminder.createNotificatication(for: Notifucka(time: Date().addingTimeInterval(5)))
         state[b: "changeBack"] = true
+        Loader.show(title: "Wait", animation: "loading_1")
+        DispatchQueue.main.asyncAfter(deadline: .now()+3) {
+            self.state = ["key":2]
+            Loader.hide()
+        }
+        
     }
 }

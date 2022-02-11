@@ -9,5 +9,6 @@ target 'TemplateProject' do
   #pod 'ApphudSDK'
   pod 'lottie-ios'
   #pod 'SDWebImage'
+#  pod 'Firebase/Analytics'
 
 end

@@ -23,8 +23,7 @@ class BaseVC: UIViewController {
     
     
     @objc func returnFromVC() {
-        if let navigationController = navigationController
-        {
+        if let navigationController = navigationController {
             navigationController.popViewController(animated: true)
         } else {
             dismiss(animated: true, completion: nil);
