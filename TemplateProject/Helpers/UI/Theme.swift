@@ -4,7 +4,6 @@
 //
 //  Created by Ivan Kopiev on 30.01.2022.
 //
-
 import UIKit
 
 enum Screen {
