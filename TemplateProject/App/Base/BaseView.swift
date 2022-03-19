@@ -20,12 +20,13 @@ class BaseView: UIView, State {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUp()
+        createConstraints()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setUp()
-        fatalError("init(coder:) has not been implemented")
+        createConstraints()
     }
     
     // MARK: - Helpers
@@ -33,6 +34,10 @@ class BaseView: UIView, State {
     ///Первоначальная настройка интерфейса
     func setUp() {
         backgroundColor = .systemBackground
+    }
+    
+    func createConstraints() {
+      
     }
     
     ///Вызывается при изменении переменной `state`

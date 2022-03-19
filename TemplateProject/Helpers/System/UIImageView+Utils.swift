@@ -37,7 +37,7 @@ extension UIImageView {
     
     private func loadImageFromCache(request: URLRequest, completion: @escaping ImageCompletion) {
         let cache = URLCache.shared
-        DispatchQueue.global(qos: .userInitiated).async {
+        DispatchQueue.global(qos: .userInteractive).async {
             guard let data = cache.cachedResponse(for: request)?.data, let image = UIImage(data: data) else { return }
             DispatchQueue.main.async {
                 self.loader(isOn: false)
