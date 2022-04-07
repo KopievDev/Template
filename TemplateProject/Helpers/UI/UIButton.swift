@@ -11,7 +11,7 @@ extension UIButton {
     
     @objc public func animateIn(view: UIView) {
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseIn) {
-            view.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+            view.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
         }
     }
     

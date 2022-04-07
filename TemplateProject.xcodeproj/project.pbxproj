@@ -29,7 +29,11 @@
 		B538578027E61AC100B7E65C /* UIImageView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B538577F27E61AC100B7E65C /* UIImageView+Utils.swift */; };
 		B538578227E61B4300B7E65C /* BindingGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B538578127E61B4300B7E65C /* BindingGesture.swift */; };
 		B538578427E61CE500B7E65C /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B538578327E61CE500B7E65C /* ScrollView.swift */; };
+		B56ACA2A27F0C6600010AFEA /* empty.json in Resources */ = {isa = PBXBuildFile; fileRef = B56ACA2927F0C6600010AFEA /* empty.json */; };
 		B5967F0927C0F00C00CE135B /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5967F0827C0F00C00CE135B /* Alert.swift */; };
+		B5A4BFEB27FECFF000D4F373 /* where.gif in Resources */ = {isa = PBXBuildFile; fileRef = B5A4BFEA27FECFF000D4F373 /* where.gif */; };
+		B5A69F2227E701E000AECF37 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A69F2127E701E000AECF37 /* UIView.swift */; };
+		B5B42B7227E705EA0022309E /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B42B7127E705EA0022309E /* UITableView.swift */; };
 		B5CD761B27A6DC1500E1AEB4 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CD761A27A6DC1500E1AEB4 /* Reminder.swift */; };
 		B5CD761D27A6DC6600E1AEB4 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CD761C27A6DC6600E1AEB4 /* Log.swift */; };
 		B5D17E9927B6D73300021FCE /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D17E9827B6D73300021FCE /* Event.swift */; };
@@ -69,7 +73,11 @@
 		B538577F27E61AC100B7E65C /* UIImageView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utils.swift"; sourceTree = "<group>"; };
 		B538578127E61B4300B7E65C /* BindingGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingGesture.swift; sourceTree = "<group>"; };
 		B538578327E61CE500B7E65C /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
+		B56ACA2927F0C6600010AFEA /* empty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = empty.json; sourceTree = "<group>"; };
 		B5967F0827C0F00C00CE135B /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		B5A4BFEA27FECFF000D4F373 /* where.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = where.gif; sourceTree = "<group>"; };
+		B5A69F2127E701E000AECF37 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		B5B42B7127E705EA0022309E /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		B5CD761A27A6DC1500E1AEB4 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		B5CD761C27A6DC6600E1AEB4 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		B5D17E9827B6D73300021FCE /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -216,6 +224,8 @@
 				B5D17E9E27B6D7FA00021FCE /* Loader.swift */,
 				B52B76F327A6B62C002BFFB6 /* UIButton.swift */,
 				B5D17E9A27B6D7A000021FCE /* ReusableCell.swift */,
+				B5A69F2127E701E000AECF37 /* UIView.swift */,
+				B5B42B7127E705EA0022309E /* UITableView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -239,8 +249,10 @@
 		B5D17EA027B6D81B00021FCE /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				B5A4BFEA27FECFF000D4F373 /* where.gif */,
 				B5D17EA127B6D9A300021FCE /* loading.json */,
 				B5D17EA327B6DA0300021FCE /* loading_1.json */,
+				B56ACA2927F0C6600010AFEA /* empty.json */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -307,6 +319,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B52B770227A6D858002BFFB6 /* Localizable.strings in Resources */,
+				B5A4BFEB27FECFF000D4F373 /* where.gif in Resources */,
+				B56ACA2A27F0C6600010AFEA /* empty.json in Resources */,
 				B52B76D627A6ABC0002BFFB6 /* LaunchScreen.storyboard in Resources */,
 				B52B76FE27A6BB3A002BFFB6 /* privacy.html in Resources */,
 				B52B76D327A6ABC0002BFFB6 /* Assets.xcassets in Resources */,
@@ -377,10 +391,12 @@
 				B52B76F027A6B5C6002BFFB6 /* AppSettings.swift in Sources */,
 				B5D17E9F27B6D7FA00021FCE /* Loader.swift in Sources */,
 				B538578427E61CE500B7E65C /* ScrollView.swift in Sources */,
+				B5B42B7227E705EA0022309E /* UITableView.swift in Sources */,
 				B5D17E9927B6D73300021FCE /* Event.swift in Sources */,
 				B52B76F627A6B655002BFFB6 /* Presenter.swift in Sources */,
 				B52B76CC27A6ABBE002BFFB6 /* SceneDelegate.swift in Sources */,
 				B52B76F227A6B5F0002BFFB6 /* Theme.swift in Sources */,
+				B5A69F2227E701E000AECF37 /* UIView.swift in Sources */,
 				B538578227E61B4300B7E65C /* BindingGesture.swift in Sources */,
 				B52B76F427A6B62C002BFFB6 /* UIButton.swift in Sources */,
 				B538578027E61AC100B7E65C /* UIImageView+Utils.swift in Sources */,

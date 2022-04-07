@@ -12,7 +12,6 @@ extension UIImageView {
     typealias ImageCompletion = (UIImage?)->Void
 
     func setImage(urlString: String, placeholder: UIImage? = nil, withLoader: Bool = true, completion: @escaping ImageCompletion = {_ in }) {
-        image = placeholder != nil ? placeholder:image
         loader(isOn: withLoader)
         let cache = URLCache.shared
         guard let url = URL(string: urlString) else { return }
@@ -20,13 +19,18 @@ extension UIImageView {
         if cache.cachedResponse(for: request) != nil {
             loadImageFromCache(request: request, completion: completion)
         } else {
+            image = placeholder != nil ? placeholder:image
             downloadImage(request: request, completion: completion)
         }
     }
     
     private func downloadImage(request: URLRequest, completion: @escaping ImageCompletion) {
-        URLSession.shared.dataTask(with: request) { [weak self] data, _, error in
-            guard let self = self, let data = data, error == nil, let image = UIImage(data: data) else { return }
+        let cache = URLCache.shared
+        URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
+            guard let self = self, let data = data, error == nil, let response = response,
+                  ((response as? HTTPURLResponse)?.statusCode ?? 500) < 300, let image = UIImage(data: data) else { return }
+            let cachedData = CachedURLResponse(response: response, data: data)
+            cache.storeCachedResponse(cachedData, for: request)
             DispatchQueue.main.async {
                 self.loader(isOn: false)
                 self.transition(to: image)

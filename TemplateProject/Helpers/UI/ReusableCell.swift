@@ -7,7 +7,12 @@
 
 import UIKit
 
-class ReusableCell: UITableViewCell {
+protocol Reusable: AnyObject {
+    var data: [String : Any?] { get set }
+    func render(data: [String:Any?])
+}
+
+class ReusableCell: UITableViewCell, Reusable {
     //MARK: - Properies
     var data: [String : Any?] = [:]
     
@@ -15,27 +20,25 @@ class ReusableCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setUp()
+        createConstraints()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setUp()
-        fatalError("init(coder:) has not been implemented")
+        createConstraints()
     }
     
     
     func render(data: [String:Any?]) {
-        
+        print(data)
     }
     
     // MARK: - Helpers
     func setUp() {
         backgroundColor = .white
-        createConstraints()
     }
     
-    func createConstraints() {
-        
-    }
+    func createConstraints() {}
 }
 

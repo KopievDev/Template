@@ -80,6 +80,15 @@ prefix func ^? (str: String) -> AlefExpressionOptional {
 }
 
 extension Dictionary {
+    
+    var json: String {
+        if let theJSONData = try? JSONSerialization.data(withJSONObject: self, options: []) {
+            return String(data: theJSONData, encoding: .utf8) ?? "failed to get json"
+        } else {
+            return "failed to get json"
+        }
+    }
+    
     subscript(a idx: Key) -> [Any?] {
         get {
             return self[idx] as? [Any?] ?? []

@@ -59,6 +59,19 @@ extension  WebViewController: WKNavigationDelegate {
 }
 
 extension WebViewController {
+    
+    static func open(url: URL, title: String? = nil) {
+        let vc = WebViewController()
+        DispatchQueue.main.async {
+            if let topVC = UIApplication.getTopViewController() {
+                print(topVC.description)
+                vc.title = title == nil ? vc.webView.title:title
+                topVC.present(vc, animated: true)
+                vc.webView.load(URLRequest(url: url))
+            }
+        }
+    }
+    
     @objc static func goToTerm() {
         let vc = WebViewController()
         DispatchQueue.global(qos: .userInteractive).async {
